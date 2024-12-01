@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body
-        {
+        body {
             box-sizing: border-box;
             margin: 0px;
-            padding: 0px; 
+            padding: 0px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .container
-        {
+
+        .container {
             height: 500px;
             width: 500px;
             background: lightgray;
             border: 5px solid;
             display: flex;
             justify-content: center;
+            animation-name: movecontainer;
+            animation-duration: 4s;
+            transition-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
             align-items: center;
+            position: relative;
+            
         }
-        .box
-        {
+        @keyframes movecontainer
+        {  to 
+            {
+                transform: rotate(-360deg);
+            }
+            50%
+            {
+            border-radius: 50%;
+            }
+            
+        }
+
+        .box {
             height: 100px;
             width: 100px;
             background: hotpink;
-            animation-name: journey-to-circle;
             animation-duration: 4s;
-            animation-iteration-count: 2;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            /* equal speed through out the animation */
+            transition-timing-function: linear;
+            animation-name: shapechanger,boxmover ;
+            animation-direction: alternate;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            
+             }
 
-        }
         /* defining animation name */
-        @keyframes journey-to-circle {
+        @keyframes shapechanger 
+        {
 
-            50%{
-  background: green;
-  border-radius: 25%;
+            50% 
+            {
+                border-radius: 50%;
+                
+            }
+        }
+        @keyframes boxmover
+         {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+            }
+           25%
+            {
+                top: 100%;
+                left:0px;
+                transform: translateY(-100%);
+            }
+            50%
+            {
+                left: 100%;
+                top: 100%;
+                transform: translate(-100% , -100%);
+            }
+            75%{
+              top: 0px;
+              left: 100%;
+             transform: translateX(-100%);
             }
             100%
             {
-                border-radius: 50%;
+                top: 0px;
+                left: 0px;
             }
-        }
+         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="box"></div>
     </div>
 </body>
+
 </html>
