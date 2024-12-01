@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        .box-1
+        {
+        
+            background-color: aqua;
+            /* transform: rotateX(50deg); //ye 50 deg rotate hoga positive direction me x axis ke according  aur iske wjh se width jyda dikhega aur height km kyunki pov z axis hai actual height width me koi kmi nhi hoga  */
+        }
+        .box-2
+        {
+          
+            
+            background-color: blueviolet;
+            /* transform:rotateY(50deg);// ye rotate hoga 50deg y axis ke according and height jyda dikhega aur width km  */
+        }
+        .box-3
+        {
+           
+            background-color: green;
+            /* transform: rotate(50deg);//ye rotate hoga x and y dono axis pe isme height ya width kuch km nhi dikhega kyunki dono axis pe move hua hai */
+        }
+    </style>
+</head>
+<body>
+    <div class="box  box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</body>
+</html>

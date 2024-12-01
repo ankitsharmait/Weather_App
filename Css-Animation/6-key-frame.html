@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container
+        {
+            height: 500px;
+            width: 500px;
+            background: lightgray;
+            border: 5px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box
+        {
+            height: 100px;
+            width: 100px;
+            background: hotpink;
+            animation-name: journey-to-circle;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+
+        }
+        /* defining animation name */
+        @keyframes journey-to-circle {
+
+            50%{
+  background: green;
+  border-radius: 25%;
+            }
+            100%
+            {
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center a div</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        /* this is by using flexbox */
+        /* .container
+        {
+           height: 500px;
+           width: 500px;
+           background: lightcoral;
+           border: 2px solid blue;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .box
+        {
+            height: 100px;
+            width: 100px;
+            background: green;
+        } */
+      /* without using flexbox */
+      .container
+      {
+        height: 500px;
+        width: 500px;
+        background: lightsalmon;
+        border: 4px solid;
+        position: relative;
+      }
+      .box
+      {
+        height: 100px;
+        width: 100px;
+        background: red;
+        border: 3px solid;
+        position: absolute;
+        /* box 50% se age ho jyega luki uska height hai */
+        top: 50%;
+        left: 50%;
+        /* ab x aur y axis me jo jyda ho gya tha tb box ka internal height 50-50 % km kar denge */
+        transform: translateX(-50%) translateY(-50%);
+        /* done */
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        .box-1
+        {
+        
+            background-color: aqua;
+            
+        }
+        .box-2
+        {
+          
+            
+            background-color: blueviolet;
+          
+        }
+        .box-3
+        {
+           
+            background-color: green;
+           
+        }
+        .box-1:hover{
+
+            /* iska matlb hua x direction me apne jagh se move kar jayega 100% means apne width itna move krega  hmlog inside value ko negative vi de skate hain for changing the direction */
+            transform: translateX(100%);
+        }
+        .box-2:hover
+        {
+            /* iska matlb jab hover karenge then y direction me apne height ka 50 % itna move karega */
+            transform: translateY(50%);
+        }
+
+        .box-3:hover{
+            /* iska mtlb box-3 pe jab hover hoga then x aur y dono direction me apne height and width ka 50-50 % lekr move kar jayega */
+            transform: translate(50%,50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box  box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</body>
+</html>
