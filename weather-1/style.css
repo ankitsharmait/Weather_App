@@ -1,0 +1,36 @@
+html {
+    font-family: sans-serif;
+}
+
+header {
+    height: 100px;
+    background: slategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: calc(100vh - 100px);
+    background: darkslategrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.location
+{
+    font-size: 50px;
+}
+.temperature
+{
+    font-size: 25px;
+}
